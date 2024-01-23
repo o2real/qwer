@@ -1,3 +1,16 @@
+print("Hello world!")
+
+a = 2
+b = 3
+c = a + b
+print(c)
+
+my_name = "Jioh"
+age = 28
+dead = False
+print("hello my name is", my_name)
+print("and I'm ", age, " years old")
+
 print("asdf")
 print(True)
 print("hello")
