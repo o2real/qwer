@@ -16,18 +16,34 @@ print(True)
 print("hello")
 print(12)
 
-def say_hello(name, age):
+def say_hello(name, age= 28):
   print("hello", name)
   print("You are", age , "years old")
 
 say_hello("jioh", 28)
-say_hello(input("what your name?"))
+# say_hello(input("what your name?"))
 
 def say_bye():
   print("bye bye")
 
 
 def tax_calculator(pay):
-  print("Yours tax is $" , float(pay) *0.35)
+  return pay * 0.35
 
-tax_calculator(input("How much money did you make this year? $ "))
+def pay_tax(tax):
+  print("thank you for paying", tax)
+
+to_pay = tax_calculator(1500000)
+pay_tax(to_pay)
+
+# tax_calculator(input("How much money did you make this year? $ "))
+
+# 1/24
+def say_hello(name = "anonymous"):
+  print("Hello", name)
+
+say_hello("Jioh")
+say_hello()
+
+def plus(a,b):
+  print(a + b)
