@@ -77,21 +77,89 @@
 # print(perfect_juice)
 
 
-from random import randint
+# from random import randint
 
-print("welcome to Python Casino")
-pc_choice = randint(1,50)
+# print("welcome to Python Casino")
+# pc_choice = randint(1,50)
 
-playing = True
+# playing = True
 
-while playing:
-  user_choice = int(input("Choose number:"))
+# while playing:
+#   user_choice = int(input("Choose number:"))
   
-  if user_choice == pc_choice:
-    print("You win!")
-    playing = False
-  elif user_choice > pc_choice:
-    print("Lower! Computer chose" , pc_choice)
+#   if user_choice == pc_choice:
+#     print("You win!")
+#     playing = False
+#   elif user_choice > pc_choice:
+#     print("Lower! Computer chose" , pc_choice)
   
-  elif user_choice < pc_choice:
-    print("Higher! Computer chose" , pc_choice)
+#   elif user_choice < pc_choice:
+#     print("Higher! Computer chose" , pc_choice)
+
+# 1/26
+
+# days_of_week = ["mon","tue","wed","thur","fri"] #리스트는 ㅈ대로 만들 수 있다. 불리언 스트링 인티저 리스트안리스트..
+# print(days_of_week)
+
+
+# days_of_week.append("sat")
+# print(days_of_week)
+# days_of_week.append("sun")
+# print(days_of_week)
+
+# days_of_week.remove("fri")
+# print(days_of_week)
+
+# print(days_of_week[4]) 
+
+# name = "jioh"
+# print(name.endswith("h"))
+
+
+# days = ("mon", "tue","wed")    #변경불가능한 리스트 튜플.
+# print(days[0])
+
+# player = {# 여러 형식의 키워드를 저장할 수 있음 , 딕셔너리는 많은 속성들을 가지고 있는 데이터를 만들 때 쓰인다.
+#   'name': 'jioh',
+#   'age': 28,
+#   'alive': True,
+#   'fav_food': ["BUR" , "HAM"]
+# }
+# player['fav_food'].append("NOO")
+# print(player.get('fav_food')[0])
+# print(player['fav_food'])
+
+
+# print(player.get('age'))
+# print(player.get('fav_food')[0])
+
+# print(player)
+# player.pop('age')
+# print(player)
+
+# print(player)
+# player["xp"] = 1500
+# print(player)
+
+# numbers = [5,3,1,5,"true",True]
+# numbers.append(["A","B"])
+# print(numbers[-1][0])
+
+
+player = {
+  "name": "jioh",
+  "age": 28,
+  "alive": True,
+  "fav_food": ("BUR" , "HAM"),
+  "friend": {
+    "name": "Yeon",
+    "fav_food": ["APP"]
+  }
+}
+player["fav_food"] = "APP"
+player.pop("alive")
+player["friend"]["fav_food"].append("BUR")
+
+
+print(player["fav_food"])
+print(player["friend"]["fav_food"])
