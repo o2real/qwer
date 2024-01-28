@@ -146,20 +146,32 @@
 # print(numbers[-1][0])
 
 
-player = {
-  "name": "jioh",
-  "age": 28,
-  "alive": True,
-  "fav_food": ("BUR" , "HAM"),
-  "friend": {
-    "name": "Yeon",
-    "fav_food": ["APP"]
-  }
-}
-player["fav_food"] = "APP"
-player.pop("alive")
-player["friend"]["fav_food"].append("BUR")
+# player = {
+#   "name": "jioh",
+#   "age": 28,
+#   "alive": True,
+#   "fav_food": ("BUR" , "HAM"),
+#   "friend": {
+#     "name": "Yeon",
+#     "fav_food": ["APP"]
+#   }
+# }
+# player["fav_food"] = "APP"
+# player.pop("alive")
+# player["friend"]["fav_food"].append("BUR")
 
 
-print(player["fav_food"])
-print(player["friend"]["fav_food"])
+# print(player["fav_food"])
+# print(player["friend"]["fav_food"])
+
+
+websites = (
+  "goole.com",
+  "https://airbnb.com",
+  "facebook.com"
+)
+
+for website in websites:
+  if not website.startswith("https://"):
+    website = f"https://{website}"
+  print(website)
