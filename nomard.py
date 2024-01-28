@@ -164,14 +164,61 @@
 # print(player["fav_food"])
 # print(player["friend"]["fav_food"])
 
+# results = {}
 
-websites = (
-  "goole.com",
-  "https://airbnb.com",
-  "facebook.com"
-)
+# from requests import get
 
-for website in websites:
-  if not website.startswith("https://"):
-    website = f"https://{website}"
-  print(website)
+# websites = (
+#   "google.com",
+#   "https://airbnb.com",
+#   "facebook.com",
+#   "naver.com",
+#   "nexon.com"
+# )
+
+# for website in websites:
+#   if not website.startswith("https://"):
+#     website = f"https://{website}"
+#   response = get(website)
+#   if response.status_code == 200 :
+#     results[website] = "OK"
+#   else :
+#     results[website] = "NOT OK"
+
+# print(results)
+
+
+
+import requests
+
+movie_ids = [
+    238,
+    680,
+    550,
+    185,
+    641,
+    515042,
+    152532,
+    120467,
+    872585,
+    906126,
+    840430
+]
+
+x = 0
+
+
+for movie_address in movie_ids:
+
+  movie = f"https://nomad-movies.nomadcoders.workers.dev/movies/{movie_ids[x]}"
+  response = requests.get(movie)
+  data = response.json()
+  print("title : ", data.get("original_title"),"\n")
+  print("status : ", data.get("status"),"\n")
+  print("release_date : ", data.get("release_date"),"\n")
+  print("overview : ", data.get("overview"),"\n")
+  print("original_language : ", data.get("original_language"),"\n")
+  print("vote_average : ", data.get("vote_average"),"\n")
+  print("-----------------------------------------------------------------------\n")
+
+  x = x+1
