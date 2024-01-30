@@ -376,6 +376,4 @@ for x in range(total_pages):
   url = f"https://weworkremotely.com/remote-full-time-jobs?page={x+1}"
   scrape_page(url)
 
-
-
 print(len(all_jobs))
