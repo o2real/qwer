@@ -189,36 +189,108 @@
 
 
 
-import requests
+# import requests
 
-movie_ids = [
-    238,
-    680,
-    550,
-    185,
-    641,
-    515042,
-    152532,
-    120467,
-    872585,
-    906126,
-    840430
-]
+# movie_ids = [
+#     238,
+#     680,
+#     550,
+#     185,
+#     641,
+#     515042,
+#     152532,
+#     120467,
+#     872585,
+#     906126,
+#     840430
+# ]
 
-x = 0
+# x = 0
 
 
-for movie_address in movie_ids:
+# for movie_address in movie_ids:
 
-  movie = f"https://nomad-movies.nomadcoders.workers.dev/movies/{movie_ids[x]}"
-  response = requests.get(movie)
-  data = response.json()
-  print("title : ", data.get("original_title"),"\n")
-  print("status : ", data.get("status"),"\n")
-  print("release_date : ", data.get("release_date"),"\n")
-  print("overview : ", data.get("overview"),"\n")
-  print("original_language : ", data.get("original_language"),"\n")
-  print("vote_average : ", data.get("vote_average"),"\n")
-  print("-----------------------------------------------------------------------\n")
+#   movie = f"https://nomad-movies.nomadcoders.workers.dev/movies/{movie_ids[x]}"
+#   response = requests.get(movie)
+#   data = response.json()
+#   print("title : ", data.get("original_title"),"\n")
+#   print("status : ", data.get("status"),"\n")
+#   print("release_date : ", data.get("release_date"),"\n")
+#   print("overview : ", data.get("overview"),"\n")
+#   print("original_language : ", data.get("original_language"),"\n")
+#   print("vote_average : ", data.get("vote_average"),"\n")
+#   print("-----------------------------------------------------------------------\n")
 
-  x = x+1
+#   x = x+1
+
+
+# Jioh = {
+#   "name" : " Jioh",
+#   "XP" : 1000,
+#   "team" : "tean X"
+# }
+# def create_player_for_team(name, xp team:)
+
+# def create_player(name, xp, team):
+#   return {
+#     "name" : name,
+#     "XP" : xp,
+#     "team" : team
+#   }
+# def introduce_player(player):
+#   name = player["name"]
+#   team = player["team"]
+#   print(f"Hello! my name is {name} and I play for {team}.")
+
+# Jioh = creat_player("Jioh", 1000, "tean X")
+class dog:
+  
+  def __init__(self, name, breed, age):
+    self.name = name
+    self.breed = breed
+    self.age = age
+
+  def sleep(self):
+    print("zzzzz....")
+
+class GuardDog(dog):
+  # def __init__(self, name, breed):
+  #   self.name = name
+  #   self.age = 5
+  #   self.breed = breed
+
+  def __init__(self, name, breed):
+    super().__init__(name, breed, 5)
+
+    self.aggresive = True
+  
+  def rrrrr(self):
+    print("stay away!")
+
+class puppy(dog): 
+  
+  def __init__(self, name, breed):
+    super().__init__(name, breed, 0.1)
+
+    self.spoiled = True
+  #   self.name = name
+  #   self.age = 0.1 
+  #   self.breed = breed
+
+  # def __str__(self):
+  #   return f"{self.breed} puppy named {self.name}."
+
+  def woof_woof(self):
+    print("woof woof!")
+
+  # def introduce(self):
+  #   self.woof_woof()
+  #   print(f"My name is {self.name} and I am a baby {self.breed}")
+  #   self.woof_woof()
+
+ruffus = puppy(name = "ruffus", breed = "beagle",)
+bibi = GuardDog(name = "bibi", breed = "dalmathian",)
+
+ruffus.sleep()
+
+bibi.sleep()
