@@ -243,54 +243,89 @@
 #   print(f"Hello! my name is {name} and I play for {team}.")
 
 # Jioh = creat_player("Jioh", 1000, "tean X")
-class dog:
+# class dog:
   
-  def __init__(self, name, breed, age):
+#   def __init__(self, name, breed, age):
+#     self.name = name
+#     self.breed = breed
+#     self.age = age
+
+#   def sleep(self):
+#     print("zzzzz....")
+
+# class GuardDog(dog):
+#   # def __init__(self, name, breed):
+#   #   self.name = name
+#   #   self.age = 5
+#   #   self.breed = breed
+
+#   def __init__(self, name, breed):
+#     super().__init__(name, breed, 5)
+
+#     self.aggresive = True
+  
+#   def rrrrr(self):
+#     print("stay away!")
+
+# class puppy(dog): 
+  
+#   def __init__(self, name, breed):
+#     super().__init__(name, breed, 0.1)
+
+#     self.spoiled = True
+#   #   self.name = name
+#   #   self.age = 0.1 
+#   #   self.breed = breed
+
+#   # def __str__(self):
+#   #   return f"{self.breed} puppy named {self.name}."
+
+#   def woof_woof(self):
+#     print("woof woof!")
+
+#   # def introduce(self):
+#   #   self.woof_woof()
+#   #   print(f"My name is {self.name} and I am a baby {self.breed}")
+#   #   self.woof_woof()
+
+# ruffus = puppy(name = "ruffus", breed = "beagle",)
+# bibi = GuardDog(name = "bibi", breed = "dalmathian",)
+
+# ruffus.sleep()
+
+# bibi.sleep()
+
+class player:
+
+  def __init__(self, name, team):
     self.name = name
-    self.breed = breed
-    self.age = age
+    self.xp = 1500
+    self.team = team
 
-  def sleep(self):
-    print("zzzzz....")
+  def introduce(self):
+    print(f"Hello I am {self.name} and I play for {self.team}.")
 
-class GuardDog(dog):
-  # def __init__(self, name, breed):
-  #   self.name = name
-  #   self.age = 5
-  #   self.breed = breed
+class team:
 
-  def __init__(self, name, breed):
-    super().__init__(name, breed, 5)
+  def __init__(self, team_name):
+    self.teamname = team_name
+    self.players = []
 
-    self.aggresive = True
+  def show_players(self):
+    for player in self.players:
+      player.introduce()
   
-  def rrrrr(self):
-    print("stay away!")
+  def add_player(self, name):
+    new_player = player(name, self.teamname)
+    self.players.append(new_player)
 
-class puppy(dog): 
-  
-  def __init__(self, name, breed):
-    super().__init__(name, breed, 0.1)
 
-    self.spoiled = True
-  #   self.name = name
-  #   self.age = 0.1 
-  #   self.breed = breed
+team_X = team("team X")
 
-  # def __str__(self):
-  #   return f"{self.breed} puppy named {self.name}."
+team_X.add_player("Jioh")
 
-  def woof_woof(self):
-    print("woof woof!")
+team_blue = team("team blue")
 
-  # def introduce(self):
-  #   self.woof_woof()
-  #   print(f"My name is {self.name} and I am a baby {self.breed}")
-  #   self.woof_woof()
+team_blue.add_player("Yeon")
 
-ruffus = puppy(name = "ruffus", breed = "beagle",)
-bibi = GuardDog(name = "bibi", breed = "dalmathian",)
-
-ruffus.sleep()
-
-bibi.sleep()
+team_blue.show_players()
