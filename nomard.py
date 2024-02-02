@@ -376,3 +376,16 @@ for x in range(total_pages):
   scrape_page(url)
 
 print(len(all_jobs))
+
+
+keywords = ["flutter", "python", "golang"]
+
+r = requests.get(
+    "https://remoteok.com/remote-flutter-jobs",
+    headers={
+        "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Whale/3.24.223.21 Safari/537.36"
+    })
+
+print(r.status_code)
+
