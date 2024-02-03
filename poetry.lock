@@ -190,7 +190,18 @@ brotli = ["brotli (>=1.0.9)", "brotlicffi (>=0.8.0)"]
 socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
 
+[[package]]
+name = "xintool"
+version = "0.0.7"
+description = "python opensource tools"
+optional = false
+python-versions = "*"
+files = [
+    {file = "xintool-0.0.7-py3-none-any.whl", hash = "sha256:113bf6cc8787c1848300b6fcb05f8dd77d67942ec307827f34fd7876f3873edc"},
+    {file = "xintool-0.0.7.tar.gz", hash = "sha256:0dae1e082a01c4a3bc6899999fec5391cb6407c56fa828e048c2fabd70d050c1"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "347071db7a0d6f4e609ff35804ef4d54e7eaffe7361ae365fb9653fe3f89d119"
+content-hash = "ef0a9fc052114a13d18205094f6a584e4ab8da78b8e2b36e58bf638eb691e311"
